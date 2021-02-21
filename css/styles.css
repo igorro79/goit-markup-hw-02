@@ -279,7 +279,9 @@ a {
   letter-spacing: 0.03em;
 }
 /*    footer    */
-
+.footer .container {
+  padding: 60px 200px;
+}
 .footer {
   background-color: #2f303a;
 }
