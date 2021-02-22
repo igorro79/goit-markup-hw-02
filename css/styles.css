@@ -32,14 +32,15 @@ a {
   padding-left: 15px;
   padding-right: 15px;
 }
-.container .main-nav {
+.container.main-nav {
   display: flex;
   align-items: center;
-  max-width: 1170px;
+  padding: 0px 200px;
 }
 .main-nav {
   display: flex;
   align-items: center;
+  /* width: 1170px; */
 }
 .logo-text {
   display: inline-block;
