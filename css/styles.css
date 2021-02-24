@@ -3,6 +3,7 @@
   --secondary-text-color: #212121;
   --accent-color: #2196f3;
   --secondary-accent-color: #ffffff;
+  --grey-bgc: #2f303a;
 }
 
 body {
@@ -60,7 +61,7 @@ address {
 /* HERO */
 
 .hero-section {
-  background-color: #2f303a;
+  background-color: var(--grey-bgc);
   margin-bottom: 94px;
   text-align: center;
 }
@@ -227,7 +228,7 @@ address {
 } */
 
 .footer {
-  background-color: #2f303a;
+  background-color: var(--grey-bgc);
 }
 
 .footer .logo-text {
