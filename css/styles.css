@@ -5,7 +5,7 @@
   --secondary-accent-color: #ffffff;
   --grey-bgc: #2f303a;
 }
-
+/* =======COMPONENTS======== */
 body {
   font-family: "Roboto", sans-serif;
   color: var(--secondary-text-color);
@@ -29,32 +29,38 @@ address {
   font-size: 26px;
   font-weight: bold;
 }
+.site-nav .active-page-link {
+  color: var(--accent-color);
+}
+/* =======END COMPONENTS======== */
+
+/* =========== HEADER=========== */
 
 .logo-accent-color {
   color: var(--accent-color);
 }
 
-.site-nav .link {
+.main-nav-link {
   color: var(--secondary-text-color);
   font-size: 14px;
   font-weight: 500;
   line-height: 1.14px;
   letter-spacing: 0.02em;
 }
-.site-nav .link:hover,
-.auth-nav .link:focus {
+.main-nav-link:hover,
+.main-nav-link:focus {
   color: var(--accent-color);
 }
 
-.auth-nav .link {
+.auth-nav-link {
   color: var(--primary-text-color);
   font-size: 14px;
   font-weight: 500;
   line-height: 1.14px;
   letter-spacing: 0.02em;
 }
-.auth-nav .link:hover,
-.auth-nav .link:focus {
+.auth-nav-link:hover,
+.auth-nav-link:focus {
   color: var(--accent-color);
 }
 
@@ -66,7 +72,7 @@ address {
   text-align: center;
 }
 
-.hero-section .title {
+.hero-title {
   color: #ffffff;
   font-size: 44px;
   font-weight: 700;
@@ -79,7 +85,7 @@ address {
   margin-left: auto;
   margin-right: auto;
 }
-.hero-section .btn {
+.hero-btn {
   min-width: 200px;
   min-height: 50px;
   background-color: var(--accent-color);
@@ -91,12 +97,25 @@ address {
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
-/* feachers */
+/* ============= feachers =============*/
 .feachers > .container {
   margin-bottom: 94px;
 }
+.visually-hidden-title {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
 
-/* .container .feachers-list {
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+/* .feachers-list {
   display: flex;
   justify-content: center;
   list-style: none;
@@ -116,10 +135,10 @@ address {
   margin-left: 30px;
 } */
 
-.feachers-list .title {
+.feachers-list-title {
   color: var(--secondary-text-color);
   font-size: 14px;
-  font-weight: bold;
+  font-weight: 700;
   text-transform: uppercase;
   line-height: 1.14;
   letter-spacing: 0.03em;
@@ -127,7 +146,7 @@ address {
   margin-top: 0px;
   margin-bottom: 10px;
 }
-.feachers-text {
+.feachers-list-text {
   color: var(--primary-text-color);
   font-size: 14px;
   letter-spacing: 0.03em;
@@ -137,8 +156,9 @@ address {
   margin-top: 0px;
   margin-bottom: 0px; */
 }
+/* ============= end feachers =============*/
 
-/* чем мы занимаемся */
+/*============= чем мы занимаемся ==========*/
 
 /* .container.work {
   margin-top: 0px;
@@ -146,7 +166,7 @@ address {
   justify-content: center;
 } */
 
-.description .title {
+.description-title {
   color: var(--secondary-text-color);
   font-size: 36px;
   font-weight: 700;
@@ -202,22 +222,19 @@ address {
   /* margin-top: 0px;
   margin-bottom: 50px; */
 }
-.team-name {
+.card-name {
   color: var(--secondary-text-color);
   font-size: 16px;
   font-weight: 500;
   text-align: center;
   line-height: 1.19;
-  /* identical to box height */
-
   letter-spacing: 0.03em;
 }
-.team-position {
+.card-text {
   color: var(--primary-text-color);
   font-size: 16px;
   text-align: center;
   line-height: 1.19;
-  /* identical to box height */
   letter-spacing: 0.03em;
 }
 
@@ -261,32 +278,24 @@ address {
 
 /* main  */
 
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-}
-
 .filter {
   width: 500px;
   margin: 94px auto 0px;
   text-align: center;
 }
-.filter .list {
+.filter-list {
   display: flex;
   justify-content: space-between;
+  list-style: none;
 }
-.filter .button {
+.filter-button {
   color: var(--secondary-text-color);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.63em;
+  letter-spacing: 0.03em;
   background-color: #f5f4fa;
+
   border-color: #f5f4fa;
   border-radius: 4px;
   padding: 3px 6px;
@@ -297,15 +306,15 @@ address {
   /* box-shadow: 0px 2px 2px 0px 0, 0, 0, 0, 25; */
 }
 
-.filter .button:active {
+.filter-button:active {
   background-color: var(--accent-color);
   color: var(--secondary-accent-color);
   border-color: var(--accent-color);
   border-width: 2px;
   border-color: transparent;
 }
-.filter .button:hover,
-.filter .button:focus {
+.filter-button:hover,
+.filter-button:focus {
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 25);
 }
 
@@ -334,18 +343,12 @@ address {
   padding: 20px 25px;
 } */
 
-.card-name {
-  color: #212121;
-  font-size: 16px;
-  font-weight: 700;
+.service-card-name {
   text-align: left;
   line-height: 2;
   letter-spacing: 0.06em;
 }
-.card-text {
-  color: var(--primary-text-color);
-  font-size: 16px;
+.service-card-text {
   text-align: left;
   line-height: 1.88;
-  letter-spacing: 0.03em;
 }
